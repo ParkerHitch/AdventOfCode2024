@@ -1,7 +1,6 @@
 [package]
-name = "AdventOfCode2024"
+name = "aoc_util"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-aoc_util = { path = "aoc_util" }

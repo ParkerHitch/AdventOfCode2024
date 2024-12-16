@@ -3,12 +3,5 @@
 version = 4
 
 [[package]]
-name = "AdventOfCode2024"
-version = "0.1.0"
-dependencies = [
- "aoc_util",
-]
-
-[[package]]
 name = "aoc_util"
 version = "0.1.0"
