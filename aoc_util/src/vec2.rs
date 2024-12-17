@@ -1,6 +1,6 @@
-use std::{fmt::Display, ops::{Add, Mul}};
+use std::{fmt::Display, hash::Hash, ops::{Add, Mul}};
 
-#[derive(PartialEq, Eq, Clone, Copy)]
+#[derive(PartialEq, Eq, Clone, Copy, Hash)]
 pub struct Vec2<T> {
     pub x: T,
     pub y: T
@@ -32,4 +32,13 @@ impl<T: Copy> Vec2<T> where T: Mul<Output = T> {
     }
 }
 
+
+impl Vec2<usize> {
+    pub fn zero() -> Self {
+        Vec2 {
+            x: 0,
+            y: 0
+        }
+    }
+}
 
