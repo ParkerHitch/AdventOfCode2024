@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 aoc_util = { path = "aoc_util" }
+splr = "0.17.2"
