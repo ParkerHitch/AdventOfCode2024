@@ -40,5 +40,20 @@ impl Vec2<usize> {
             y: 0
         }
     }
+
+    pub fn signed(&self) -> Vec2<isize> {
+        Vec2 {
+            x: self.x as isize,
+            y: self.y as isize
+        }
+    }
 }
 
+impl Vec2<isize> {
+    pub fn unsigned(&self) -> Vec2<usize> {
+        Vec2 {
+            x: self.x as usize,
+            y: self.y as usize
+        }
+    }
+}
