@@ -1,4 +1,4 @@
-use std::{fmt::Display, hash::Hash, ops::{Add, Mul}};
+use std::{fmt::Display, hash::Hash, ops::{Add, Mul, Sub}};
 
 #[derive(PartialEq, Eq, Clone, Copy, Hash)]
 pub struct Vec2<T> {
@@ -19,6 +19,17 @@ impl<T: Add<Output=T>> Add for Vec2<T> {
         Vec2 {
             x: self.x + rhs.x,
             y: self.y + rhs.y
+        }
+    }
+}
+
+impl<T: Sub<Output=T>> Sub for Vec2<T> {
+    type Output = Self;
+
+    fn sub(self, rhs: Self) -> Self::Output {
+        Vec2 {
+            x: self.x - rhs.x,
+            y: self.y - rhs.y
         }
     }
 }
